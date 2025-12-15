@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test FormSubmit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .warning {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>🧪 Prueba de FormSubmit</h1>
+        <div class="info">
+            <strong>📧 Destinatario:</strong> nachonsccru@gmail.com<br>
+            <strong>⚠️ Primera vez:</strong> FormSubmit enviará un email de confirmación. Debes hacer clic en el enlace para activar el servicio.
+        </div>
+
+        <form action="https://formsubmit.co/nachonsccru@gmail.com" method="POST">
+            <!-- Configuración FormSubmit -->
+            <input type="hidden" name="_next" value="https://kiralot.github.io/portafolio/#contacto">
+            <input type="hidden" name="_subject" value="✅ PRUEBA - Activación FormSubmit Portafolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-group">
+                <label>Tu Nombre:</label>
+                <input type="text" name="name" value="Test FormSubmit" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Tu Email:</label>
+                <input type="email" name="email" value="test@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Asunto:</label>
+                <input type="text" name="subject" value="Prueba de activación" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Mensaje:</label>
+                <textarea name="message" required>Este es un mensaje de prueba para activar FormSubmit en el portafolio de Ignacio Luis Prosperi.</textarea>
+            </div>
+            
+            <button type="submit">🚀 Enviar Prueba y Activar FormSubmit</button>
+        </form>
+
+        <div class="warning">
+            <strong>📋 Pasos después de enviar:</strong><br>
+            1. Revisa la bandeja de entrada de <strong>nachonsccru@gmail.com</strong><br>
+            2. Busca un email de <strong>FormSubmit.co</strong><br>
+            3. Haz clic en el enlace de confirmación<br>
+            4. ¡Listo! El formulario del portafolio funcionará automáticamente
+        </div>
+    </div>
+</body>
+</html>
