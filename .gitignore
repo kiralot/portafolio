@@ -1,0 +1,25 @@
+# Ignorar todo excepto los archivos del portafolio
+BOOTCAMP/
+curso power bi/
+curso power bi.rar
+proyecto power bi/
+proyecto power bi 2/
+*.pdf
+*.lnk
+*.url
+*.exe
+*.rar
+*.zip
+*.torrent
+*.CT
+.vscode/
+.git/
+
+# Mantener solo los archivos necesarios del portafolio
+!index.html
+!styles.css
+!script.js
+!README.md
+!*.png
+!*.jpg
+!*.jpeg
