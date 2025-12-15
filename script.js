@@ -118,8 +118,6 @@ timelineItems.forEach((item, index) => {
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
     // Obtener los valores del formulario
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -128,6 +126,7 @@ contactForm.addEventListener('submit', (e) => {
     
     // Validación simple
     if (!name || !email || !subject || !message) {
+        e.preventDefault();
         alert('Por favor, completa todos los campos.');
         return;
     }
@@ -135,27 +134,13 @@ contactForm.addEventListener('submit', (e) => {
     // Validar email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+        e.preventDefault();
         alert('Por favor, ingresa un email válido.');
         return;
     }
     
-    // Aquí puedes agregar la lógica para enviar el formulario
-    // Por ahora, solo mostraremos un mensaje de éxito
-    alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-    
-    // Limpiar el formulario
-    contactForm.reset();
-    
-    // Nota: Para hacer funcional el formulario, necesitarás:
-    // 1. Un servicio backend (Node.js, PHP, etc.)
-    // 2. O usar un servicio como FormSpree, EmailJS, etc.
-    // Ejemplo con EmailJS:
-    // emailjs.send("service_id", "template_id", {
-    //     from_name: name,
-    //     from_email: email,
-    //     subject: subject,
-    //     message: message
-    // });
+    // El formulario se enviará a FormSubmit automáticamente
+    // FormSubmit redirigirá a la página especificada en _next
 });
 
 // ============================================
